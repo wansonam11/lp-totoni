@@ -1,0 +1,707 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//header
+.header {
+  z-index: 999;
+  position: relative;
+
+  &__container {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+  }
+
+  &__logo {
+    width: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li {
+        a {
+          font-family: "noto serif jp";
+          color: #fff;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+//fv
+.fv {
+  width: 100%;
+  height: 100vh;
+  background: url(./img/fv__bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  position: relative;
+
+  &__title {
+    color: #fff;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+
+    span {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 2rem;
+    }
+  }
+
+  &__info {
+    padding: 0 40px 20px 100px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+
+    &__text {
+      color: #fff;
+      font-family: "noto serif jp";
+      font-size: 2.6rem;
+    }
+
+    &__date {
+      margin-top: 10px;
+      color: #fff;
+      font-size: 4rem;
+    }
+
+    &__date {}
+  }
+
+  &__float {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//concept
+.concept {
+  background: url(./img/concept_bg.png) no-repeat top center;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: 2rem;
+
+    small {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 1.4rem;
+    }
+  }
+
+  &__content {
+    padding-top: 40px;
+    display: flex;
+
+    &__img {
+      width: 500px;
+      height: 500px;
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    &__text {
+
+      h3 {
+        font-family: "noto serif jp";
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-family: "noto serif jp";
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 2;
+      }
+
+      width: calc(100% - 500px);
+      padding-left: 100px;
+    }
+  }
+}
+
+//cta
+.cta {
+  width: 100%;
+  height: 330px;
+  background: url(./img/cta__bg.jpg) no-repeat top center;
+  background-size: cover;
+
+  &__container {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+
+    &__title {
+      color: #fff;
+      font-size: 2.4rem;
+      font-family: "noto serif jp";
+      font-weight: normal;
+
+      span {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        padding: 0 40px;
+      }
+    }
+
+    &__img {
+      width: 526px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 2rem;
+      font-family: "noto serif jp";
+      font-weight: normal;
+      span{
+        position: relative;
+        &::after {
+          content: "";
+          background: url(./img/cta__arrow.svg);
+          width: 12px;
+          height: 12px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: -24px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+//point
+.point {
+  background-color: EBEBEB;
+
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+    small {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 1.4rem;
+    }
+  }
+
+  &__box {
+    &__img {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+
+      &__img {
+        width: 588px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__info {
+      padding: 40px 0 80px 0;
+      display: flex;
+
+      &__title {
+        font-weight: normal;
+        width: 450px;
+        font-family: "noto serif jp";
+        font-size: 2.6rem;
+        border-right: 1px solid #606060;
+
+        small {
+          margin-bottom: 40px;
+          display: block;
+          font-size: 1.4rem;
+        }
+      }
+
+      &__content {
+        width: calc(100% - 450px);
+        font-weight: 300;
+        font-family: "noto serif jp";
+        font-size: 2rem;
+        padding-left: 40px;
+        line-height: 2;
+      }
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    padding-bottom: 80px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//floor
+.floor {
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+    small {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 1.4rem;
+    }
+  }
+
+  &__info {
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+
+  &__plan {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 40px;
+
+    &__map01 {
+      width: 556px;
+      span {
+        font-size: 2rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__map02 {
+      width: 556px;
+      span {
+        font-size: 2rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//slide
+.slide {
+  
+}
+
+//access
+.access {
+  background: url(./img/concept_bg.png) no-repeat top center;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      width: 324px;
+      line-height: 2;
+      &__title {
+        font-weight: normal;
+        padding-top: 40px;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    
+        small {
+          display: block;
+          font-family: "noto serif jp";
+          font-size: 1.4rem;
+        }
+      }
+      h3 {
+        font-family: "noto serif jp";
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+
+      }
+    }
+
+    &__info {
+      font-size: 1.4rem;
+    }
+
+    &__image {
+      width: calc(100% - 324px);
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//flow
+.flow {
+  padding: 40px 0;
+
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+    small {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 1.4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      width: 320px;
+      border-top: 1px solid #606060;
+      border-bottom: 1px solid #606060;
+      position: relative;
+
+      &::after {
+        content: "";
+        background: url(./img/flow__arrow.svg);
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -60px;
+      }
+
+      &:nth-child(3) {
+        &::after {
+          display: none;
+        }
+       }
+
+      &__index {
+        right: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 20px;
+        text-align: center;
+        background-color: #fff;
+      }
+    
+      &__img {
+        padding-top: 30px;
+        margin: 0 auto;
+        width: 112px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        font-family: "noto serif jp";
+        padding: 30px 0px;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      p {
+        line-height: 1.8;
+        font-family: "noto serif jp";
+        padding-bottom: 30px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//company
+.company {
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    padding-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+    small {
+      display: block;
+      font-family: "noto serif jp";
+      font-size: 1.4rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+
+    &:nth-child(3) {
+     flex-direction: row-reverse; 
+     .company__box__content {
+      padding-left: 0;
+      padding-right: 80px;
+     }
+    }
+    
+    &__img {
+      width: 500px;
+      height: 500px;
+    }
+
+    &__content {
+      width: calc(100% - 500px);
+      height: 500px;
+      padding-left: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-family: "noto serif jp";
+        font-size: 3rem;
+        padding-bottom: 20px;
+        font-weight: 300;
+
+        small {
+          display: block;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        font-family: "noto serif jp";
+        font-size: 1.6rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  &__info {
+    padding: 40px 0 80px 0;
+    width: 100%;
+    &__table {
+      tbody {
+        width: 100%;
+  
+        tr {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 24px;
+          text-align: left;
+  
+          th {
+            font-family: "Noto Serif JP";
+            width: 195px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #606060;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 300;
+          }
+  
+          td {
+            font-family: "Noto Serif JP";
+            width: calc(100% - 210px);
+            padding-bottom: 24px;
+            border-bottom: 1px solid #606060;
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+//footer 
+.footer {
+  width: 100%;
+  background-color: #606060;
+  padding: 80px 0 80px 0;
+
+  &__container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    position: relative;
+
+    &__logo {
+      width: 118px;
+      margin: 0 auto;
+      padding: 40px 0 40px 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      li {
+        a {
+          color: #fff;
+          font-size: 1.6rem;
+          font-family: "Noto Serif JP";
+        }
+      }
+    }
+
+    &__copy {
+      text-align: center;
+      padding-top: 30px;
+      color: #fff;
+      font-size: 1.8rem;
+      font-family: "Noto Serif JP";
+    }
+    .top-button {
+      width: 77px;
+      height: 77px;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+
+      a {
+        width: 100%;
+        img {
+          
+        }
+      }
+    }
+  }
+}
