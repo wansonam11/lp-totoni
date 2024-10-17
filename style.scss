@@ -335,6 +335,8 @@ a {
 
 //floor
 .floor {
+  padding: 70px 0px;
+
   &__container {
     width: 100%;
     max-width: 1240px;
@@ -366,37 +368,82 @@ a {
     width: 100%;
     padding-top: 40px;
 
+    //map01
     &__map01 {
-      width: 556px;
-      span {
+      position: relative;
+
+      &__index {
         font-size: 2rem;
+        position: absolute;
+        right: 0;
+        top: -35px;
       }
-      img {
-        width: 100%;
+
+      &__img {
+        width: 556px;
+        height: 556px;
+        img {
+          width: 100%;
+        }
+      }
+
+      &__popup {
+        width: 55px;
+        height: 55px;
+        display: block;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        img {
+          width: 100%;
+        }
       }
     }
+    //map02
     &__map02 {
-      width: 556px;
-      span {
+      margin-top: -200px;
+      position: relative;
+
+      &__index {
         font-size: 2rem;
+        position: absolute;
+        left: 0;
+        bottom: 160px;
       }
-      img {
-        width: 100%;
+
+      &__img {
+        width: 556px;
+        height: 556px;
+        img {
+          width: 100%;
+        }
+      }
+      &__popup {
+        width: 55px;
+        height: 55px;
+        display: block;
+        position: absolute;
+        right: 10px;
+        bottom: 210px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
 }
 
 //slide
-.slide {
-  
+.slick-slide {
+height: auto;
 }
+
 
 //access
 .access {
   background: url(./img/concept_bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 80px;
 
   &__container {

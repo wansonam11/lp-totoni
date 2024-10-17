@@ -23,22 +23,22 @@
       <nav class="header__nav">
         <ul>
           <li>
-            <a href="">コンセプト</a>
+            <a href="#concept">コンセプト</a>
           </li>
           <li>
-            <a href="">ポイント</a>
+            <a href="#point">ポイント</a>
           </li>
           <li>
-            <a href="">間取り</a>
+            <a href="#floor">間取り</a>
           </li>
           <li>
-            <a href="">アクセス</a>
+            <a href="#access">アクセス</a>
           </li>
           <li>
-            <a href="">見学の流れ</a>
+            <a href="#flow">見学の流れ</a>
           </li>
           <li>
-            <a href="">会社概要</a>
+            <a href="company">会社概要</a>
           </li>
         </ul>
       </nav>
@@ -209,26 +209,48 @@
       </ul>
       <div class="floor__plan">
         <div class="floor__plan__map01">
-          <span class="floor__plan__index">
+          <span class="floor__plan__map01__index">
             1F
           </span>
-          <img src="./img/floor__img01.jpg">
-        </div>
-        <div class="floor__plan__map02">
-          <span class="floor__plan__index">
-            2F
+          <div class="floor__plan__map01__img">
+            <img src="./img/floor__img01.jpg">
+          </div>
+          <span class="floor__plan__map01__popup">
+            <img src="./img/floor__zoom.svg">
           </span>
-          <img src="./img/floor__img02.jpg">
         </div>
-      </div>
-    </div>
+
+          <div class="floor__plan__map02">
+            <span class="floor__plan__map02__index">
+              2F
+            </span>
+            <div class="floor__plan__map02__img">
+              <img src="./img/floor__img02.jpg">
+            </div>
+            <span class="floor__plan__map02__popup">
+              <img src="./img/floor__zoom.svg">
+            </span>
+          </div>
+
     </div>
   </section>
 
   <!-- slide -->
   <section class="slide" id="slide">
-    <div class="slide__container"></div>
-    </div>
+      <div class="slide__slider">
+        <div class="slide__slider--cnt">
+          <img class="img-pc" src="img/point__img01.jpg" width="588" height="355">
+        </div>
+        <div class="slide__slider--cnt">
+          <img class="img-pc" src="img/point__img02.jpg"width="588" height="355">
+        </div>
+        <div class="slide__slider--cnt">
+          <img class="img-pc" src="img/point__img03.jpg"width="588" height="355">
+        </div>
+        <div class="slide__slider--cnt">
+          <img class="img-pc" src="img/point__img04.jpg"width="588" height="355">
+        </div>
+      </div>
   </section>
 
   <!-- access -->
@@ -430,37 +452,59 @@
         <div class="footer__content__logo">
           <img src="./img/footer__logo.svg" alt="logo">
         </div>
-          <ul>
-            <li>
-              <a href="">コンセプト</a>
-            </li>
-            <li>
-              <a href="">ポイント</a>
-            </li>
-            <li>
-              <a href="">間取り</a>
-            </li>
-            <li>
-              <a href="">アクセス</a>
-            </li>
-            <li>
-              <a href="">見学の流れ</a>
-            </li>
-            <li>
-              <a href="">会社概要</a>
-            </li>
-          </ul>
-          <p class="footer__content__copy">
-            &copy;totonoi-house All rights reserved.
-          </p>
-          <div class="top-button">
-            <a href="#fv">
-              <img src="./img/to__top.svg" alt="top-arrow">
-            </a>
-          </div>
+        <ul>
+          <li>
+            <a href="#concept">コンセプト</a>
+          </li>
+          <li>
+            <a href="#point">ポイント</a>
+          </li>
+          <li>
+            <a href="#floor">間取り</a>
+          </li>
+          <li>
+            <a href="#access">アクセス</a>
+          </li>
+          <li>
+            <a href="#flow">見学の流れ</a>
+          </li>
+          <li>
+            <a href="#company">会社概要</a>
+          </li>
+        </ul>
+        <p class="footer__content__copy">
+          &copy;totonoi-house All rights reserved.
+        </p>
+        <div class="top-button">
+          <a href="#fv">
+            <img src="./img/to__top.svg" alt="top-arrow">
+          </a>
+        </div>
 
       </div>
     </div>
   </footer>
+<script>
 
+/* slide */
+$(function() {
+    $('.slide__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        autoplay: true,
+        speed: 15000,
+        autoplaySpeed: 0,
+        arrow: false,
+        cssEase: 'linear',
+        infinite: true,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        variableWidth: true,
+    });
+})
+
+
+
+</script>
 </body>

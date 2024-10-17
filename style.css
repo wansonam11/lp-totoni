@@ -279,6 +279,9 @@ a {
   width: 100%;
 }
 
+.floor {
+  padding: 70px 0px;
+}
 .floor__container {
   width: 100%;
   max-width: 1240px;
@@ -307,28 +310,69 @@ a {
   padding-top: 40px;
 }
 .floor__plan__map01 {
-  width: 556px;
+  position: relative;
 }
-.floor__plan__map01 span {
+.floor__plan__map01__index {
   font-size: 2rem;
+  position: absolute;
+  right: 0;
+  top: -35px;
 }
-.floor__plan__map01 img {
+.floor__plan__map01__img {
+  width: 556px;
+  height: 556px;
+}
+.floor__plan__map01__img img {
+  width: 100%;
+}
+.floor__plan__map01__popup {
+  width: 55px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.floor__plan__map01__popup img {
   width: 100%;
 }
 .floor__plan__map02 {
-  width: 556px;
+  margin-top: -200px;
+  position: relative;
 }
-.floor__plan__map02 span {
+.floor__plan__map02__index {
   font-size: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 160px;
 }
-.floor__plan__map02 img {
+.floor__plan__map02__img {
+  width: 556px;
+  height: 556px;
+}
+.floor__plan__map02__img img {
   width: 100%;
+}
+.floor__plan__map02__popup {
+  width: 55px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 210px;
+}
+.floor__plan__map02__popup img {
+  width: 100%;
+}
+
+.slick-slide {
+  height: auto;
 }
 
 .access {
   background: url(./img/concept_bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 .access__container {
