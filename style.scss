@@ -36,6 +36,79 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+    @media screen and (max-width: 1024px) {
+      padding: 0 4%;
+    }
+    
+    .ham-menu {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      display: none;
+  
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+  
+      &.active span {
+        &:nth-child(1) {
+          transform: rotate(-45deg);
+          top: 48px;
+          width: 75px;
+          left: 13px;
+  
+          @media screen and (max-width: 727px) {
+            top: 24px;
+            left: 7px;
+            width: 40px;
+          }
+        }
+  
+        &:nth-child(2) {
+          display: none;
+        }
+  
+        &:nth-child(3) {
+          transform: rotate(45deg);
+          top: 49px;
+          width: 75px;
+          left: 13px;
+  
+          @media screen and (max-width: 727px) {
+            top: 25px;
+            left: 7px;
+            width: 40px;
+          }
+        }
+      }
+  
+      span {
+        display: inline-block;
+        position: absolute;
+        left: 20px;
+        height: 1px;
+        background: #fff;
+        width: 50px;
+  
+        &:nth-child(1) {
+          top: 65px;
+          margin-left: 20px;
+        }
+  
+        &:nth-child(2) {
+          top: 50px;
+          margin-left: 20px;
+        }
+  
+        &:nth-child(3) {
+          top: 35px;
+          margin-left: 20px;
+        }
+      }
+    }
   }
 
   &__logo {
@@ -58,6 +131,9 @@ a {
           font-size: 1.5rem;
         }
       }
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
     }
   }
 }
@@ -83,11 +159,32 @@ a {
     margin: 0 auto;
     color: #fff;
     text-align: center;
+    @media screen and (max-width: 375px) {
+      width: 100%;
+      font-size: 4rem;
+    }
 
+    .sp {
+      display: none;
+      @media screen and (max-width: 375px) {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3rem;
+      top: 40%;
+    }
     span {
       display: block;
       font-family: "noto serif jp";
       font-size: 2rem;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -97,20 +194,38 @@ a {
     position: absolute;
     left: 0;
     bottom: 40px;
+    @media screen and (max-width: 640px) {
+      text-align: center;
+      padding: 0 4%;
+      bottom: 23%;
+      width: 75%;
+      left: 50%;
+      transform: translate(-50%);
+    }
 
     &__text {
       color: #fff;
       font-family: "noto serif jp";
       font-size: 2.6rem;
+      @media screen and (max-width: 1024px) {
+        font-size: 2rem;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 1.6rem;
+      }
     }
 
     &__date {
       margin-top: 10px;
       color: #fff;
       font-size: 4rem;
+      @media screen and (max-width: 1024px) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 2.2rem;
+      }
     }
-
-    &__date {}
   }
 
   &__float {
@@ -119,9 +234,16 @@ a {
     bottom: 40px;
     width: 200px;
     height: 200px;
+    @media screen and (max-width: 1024px) {
+      width: 20vw;
+      height: 20vw;
+    }
 
     img {
       width: 100%;
+    }
+    @media screen and (max-width: 640px) {
+      display: none;
     }
   }
 }
@@ -132,18 +254,31 @@ a {
   background-size: cover;
   padding-top: 80px;
   padding-bottom: 80px;
+  @media screen and (max-width: 375px) {
+    padding: 10% 0;
+  }
 
   &__container {
     width: 100%;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__title {
     font-weight: normal;
     padding-top: 40px;
     font-size: 2rem;
+    @media screen and (max-width: 375px) {
+      padding-top: 0;
+    }
 
     small {
       display: block;
@@ -155,18 +290,42 @@ a {
   &__content {
     padding-top: 40px;
     display: flex;
+    width: 100%;
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;
+    }
 
     &__img {
       width: 500px;
-      height: 500px;
+
+      @media screen and (max-width: 1024px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        padding: 2% 5%;
+      }
+      @media screen and (max-width: 375px) {
+        padding: 0;
+      }
 
       img {
         width: 100%;
       }
-
     }
 
     &__text {
+      width: calc(100% - 500px);
+      padding-left: 100px;
+
+      @media screen and (max-width: 1024px) {
+        width: 60%;
+        padding-left:4%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        padding-left:0;
+      }
 
       h3 {
         font-family: "noto serif jp";
@@ -174,6 +333,12 @@ a {
         font-size: 3rem;
         line-height: 1.5;
         margin-bottom: 30px;
+        @media screen and (max-width: 1024px) {
+          font-size: 2.4vw;
+        }
+        @media screen and (max-width: 375px) {
+          font-size: 4.7vw;
+        }
       }
 
       p {
@@ -181,10 +346,13 @@ a {
         font-weight: 300;
         font-size: 1.8rem;
         line-height: 2;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.8vw;
+        }
+        @media screen and (max-width: 375px) {
+          font-size: 3.6vw;
+        }
       }
-
-      width: calc(100% - 500px);
-      padding-left: 100px;
     }
   }
 }
@@ -195,6 +363,9 @@ a {
   height: 330px;
   background: url(./img/cta__bg.jpg) no-repeat top center;
   background-size: cover;
+  @media screen and (max-width: 1024px) {
+    height: 50vw;
+  }
 
   &__container {
     max-width: 1240px;
@@ -205,6 +376,13 @@ a {
     align-items: center;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__link {
@@ -212,22 +390,35 @@ a {
     flex-direction: column;
     gap: 40px;
     text-align: center;
+    @media screen and (max-width: 375px) {
+      gap: 10px;
+    }
 
     &__title {
       color: #fff;
       font-size: 2.4rem;
       font-family: "noto serif jp";
       font-weight: normal;
+      @media screen and (max-width: 640px) {
+        font-size: 1.8rem;
+      }
 
       span {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         padding: 0 40px;
+        @media screen and (max-width: 640px) {
+          width: 60%;
+          padding: 0 2%;
+        }
       }
     }
 
     &__img {
       width: 526px;
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -239,6 +430,9 @@ a {
       font-size: 2rem;
       font-family: "noto serif jp";
       font-weight: normal;
+      @media screen and (max-width: 640px) {
+        font-size: 1.8rem;
+      }
       span{
         position: relative;
         &::after {
@@ -253,6 +447,8 @@ a {
           transform: translateY(-50%);
         }
       }
+
+
     }
   }
 }
@@ -266,6 +462,13 @@ a {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__title {
@@ -273,6 +476,9 @@ a {
     padding-top: 40px;
     font-size: 2rem;
     margin-bottom: 30px;
+    @media screen and (max-width: 1024px) {
+      width: 40%;
+    }
 
     small {
       display: block;
@@ -287,7 +493,7 @@ a {
       width: 100%;
       gap: 20px;
 
-      &__img {
+      &__image {
         width: 588px;
         img {
           width: 100%;
@@ -298,6 +504,10 @@ a {
     &__info {
       padding: 40px 0 80px 0;
       display: flex;
+      width: 100%;
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+      }
 
       &__title {
         font-weight: normal;
@@ -305,6 +515,14 @@ a {
         font-family: "noto serif jp";
         font-size: 2.6rem;
         border-right: 1px solid #606060;
+        @media screen and (max-width: 1024px) {
+          width: 60%;
+          font-size: 2rem;
+        }
+        @media screen and (max-width: 640px) {
+          border-right: 0;
+        }
+  
 
         small {
           margin-bottom: 40px;
@@ -320,6 +538,14 @@ a {
         font-size: 2rem;
         padding-left: 40px;
         line-height: 2;
+        @media screen and (max-width: 1024px) {
+          width: 60%;
+          font-size: 1.4rem;
+        }
+        @media screen and (max-width: 640px) {
+          padding-left: 0;
+        }
+  
       }
     }
   }
@@ -337,11 +563,22 @@ a {
 .floor {
   padding: 70px 0px;
 
+  @media screen and (max-width: 640px) {
+    padding: 4% 0 10% 0;
+  }
+
   &__container {
     width: 100%;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__title {
@@ -360,6 +597,9 @@ a {
   &__info {
     font-size: 1.4rem;
     line-height: 2;
+    @media screen and (max-width: 375px) {
+      font-size: 1.2rem;
+    }
   }
 
   &__plan {
@@ -371,17 +611,31 @@ a {
     //map01
     &__map01 {
       position: relative;
+      @media screen and (max-width: 1200px) {
+        width: 45vw;
+      }
+  
+      @media screen and (max-width: 640px) {
+
+      }
 
       &__index {
         font-size: 2rem;
         position: absolute;
         right: 0;
         top: -35px;
+        @media screen and (max-width: 640px) {
+          font-size: 1.4rem;
+          left: 0;
+          top: -8%;
+        }
       }
 
       &__img {
         width: 556px;
-        height: 556px;
+        @media screen and (max-width: 1200px) {
+          width: 100%
+        }
         img {
           width: 100%;
         }
@@ -389,11 +643,18 @@ a {
 
       &__popup {
         width: 55px;
-        height: 55px;
+
         display: block;
         position: absolute;
         right: 10px;
         bottom: 10px;
+        @media screen and (max-width: 1200px) {
+          bottom: 5%;
+        }
+        @media screen and (max-width: 640px) {
+          width: 6vw;
+    
+        }
         img {
           width: 100%;
         }
@@ -403,40 +664,79 @@ a {
     &__map02 {
       margin-top: -200px;
       position: relative;
+      @media screen and (max-width: 1200px) {
+        width: 45vw;
+      }
+      @media screen and (max-width: 640px) {
+        margin-top: 0;
+      }
 
       &__index {
         font-size: 2rem;
         position: absolute;
         left: 0;
         bottom: 160px;
+        @media screen and (max-width: 1200px) {
+          bottom: 24%;
+        }
+        @media screen and (max-width: 640px) {
+          font-size: 1.4rem;
+          top: -8%;
+        }
       }
 
       &__img {
         width: 556px;
-        height: 556px;
+  
+        @media screen and (max-width: 1200px) {
+          width: 100%;
+        }
         img {
           width: 100%;
         }
       }
+
       &__popup {
         width: 55px;
-        height: 55px;
         display: block;
         position: absolute;
         right: 10px;
         bottom: 210px;
+        @media screen and (max-width: 640px) {
+          width: 6vw;
+          bottom: 5%;
+        }
+
         img {
           width: 100%;
         }
       }
     }
   }
+
 }
 
-//slide
-.slick-slide {
-height: auto;
+//plan-slide
+.plan-slide {
+  width: 100%;
+
+  &__slider--cnt {
+    height: auto;
+    @media screen and (max-width: 640px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+      width: 240px;
+   
+    }
+  }
 }
+// .slide {
+//   .slick-slide {
+//     height: auto;
+//     }
+// }
 
 
 //access
@@ -451,14 +751,28 @@ height: auto;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
   &__content {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
 
     &__text {
       width: 324px;
       line-height: 2;
+      @media screen and (max-width: 375px) {
+        width: 100%;
+      }
+
       &__title {
         font-weight: normal;
         padding-top: 40px;
@@ -471,11 +785,11 @@ height: auto;
           font-size: 1.4rem;
         }
       }
+
       h3 {
         font-family: "noto serif jp";
         font-size: 1.8rem;
         padding-bottom: 20px;
-
       }
     }
 
@@ -485,6 +799,9 @@ height: auto;
 
     &__image {
       width: calc(100% - 324px);
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
       iframe {
         width: 100%;
       }
@@ -501,6 +818,13 @@ height: auto;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__title {
@@ -519,12 +843,22 @@ height: auto;
   &__content {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      gap: 40px;
+    }
 
     &__item {
       width: 320px;
       border-top: 1px solid #606060;
       border-bottom: 1px solid #606060;
       position: relative;
+      @media screen and (max-width: 1024px) {
+        width: 30%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
 
       &::after {
         content: "";
@@ -537,6 +871,12 @@ height: auto;
         top: 50%;
         transform: translateY(-50%);
         right: -60px;
+        @media screen and (max-width: 1024px) {
+          right: -13%;
+        }
+        @media screen and (max-width: 640px) {
+          display: none;
+        }
       }
 
       &:nth-child(3) {
@@ -560,6 +900,15 @@ height: auto;
         padding-top: 30px;
         margin: 0 auto;
         width: 112px;
+        height: 95px;
+        @media screen and (max-width: 1024px) {
+          width: 8vw;
+        
+        }
+        @media screen and (max-width: 1024px) {
+          width: 17vw;
+          height: 21vw;
+        }
 
         img {
           width: 100%;
@@ -572,12 +921,21 @@ height: auto;
         padding: 30px 0px;
         font-size: 2rem;
         font-weight: 300;
+        @media screen and (max-width: 1024px) {
+         padding: 10% 0;
+        }
+        @media screen and (max-width: 1024px) {
+          padding: 4% 0;
+         }
       }
       p {
         line-height: 1.8;
         font-family: "noto serif jp";
         padding-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -585,11 +943,19 @@ height: auto;
 
 //company
 .company {
+
   &__container {
     width: 100%;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__title {
@@ -609,27 +975,77 @@ height: auto;
     display: flex;
     align-items: center;
     padding-bottom: 60px;
+    width: 100%;
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;;
+    }
 
     &:nth-child(3) {
      flex-direction: row-reverse; 
+  
+    
+     @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;;
+    }
+     .company__box__img {
+      @media screen and (max-width: 1024px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
+        img {
+          width: 100%;;
+      }
+     }
+     .company__box__img {
+      @media screen and (max-width: 640x) {
+        width: 100%;
+      }
+     }
+
      .company__box__content {
       padding-left: 0;
       padding-right: 80px;
+      @media screen and (max-width: 1024px) {
+        width: 50%;
+        padding-right: 4%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
      }
     }
     
     &__img {
       width: 500px;
-      height: 500px;
+      @media screen and (max-width: 1024px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        padding-top: 4%;
+      }
+      img {
+        width: 100%;
+      }
     }
 
     &__content {
       width: calc(100% - 500px);
-      height: 500px;
       padding-left: 80px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @media screen and (max-width: 1024px) {
+        width: 50%;
+        padding-left: 4%;
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        padding: 0;
+      }
+
 
       h3 {
         font-family: "noto serif jp";
@@ -647,6 +1063,9 @@ height: auto;
         font-family: "noto serif jp";
         font-size: 1.6rem;
         line-height: 2;
+        @media screen and (max-width: 640px) {
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -664,6 +1083,9 @@ height: auto;
           justify-content: space-between;
           margin-top: 24px;
           text-align: left;
+          @media screen and (max-width: 640px) {
+            flex-direction: column;
+          }
   
           th {
             font-family: "Noto Serif JP";
@@ -673,6 +1095,10 @@ height: auto;
             font-size: 18px;
             line-height: 1.5;
             font-weight: 300;
+            @media screen and (max-width: 640px) {
+              border-bottom: none;
+              padding-bottom: 2%;
+            }
           }
   
           td {
@@ -683,6 +1109,13 @@ height: auto;
             font-size: 18px;
             line-height: 1.8;
             font-weight: 300;
+
+            @media screen and (max-width: 640px) {
+              width: 100%;
+              padding-bottom: 2%;
+              padding-left: 2%;
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -695,12 +1128,21 @@ height: auto;
   width: 100%;
   background-color: #606060;
   padding: 80px 0 80px 0;
-
+  @media screen and (max-width: 640px) {
+    padding: 8%;
+  }
   &__container {
     width: 100%;
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      padding: 0 2%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0 4%;
+    }
   }
 
   &__content {
@@ -720,6 +1162,11 @@ height: auto;
       justify-content: center;
       align-items: center;
       gap: 40px;
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+        gap: 2vh;
+      }
+
       li {
         a {
           color: #fff;
@@ -735,6 +1182,10 @@ height: auto;
       color: #fff;
       font-size: 1.8rem;
       font-family: "Noto Serif JP";
+      @media screen and (max-width: 640px) {
+        padding: 10%;
+        font-size: 1.2rem;
+      }
     }
     .top-button {
       width: 77px;
@@ -742,6 +1193,9 @@ height: auto;
       position: absolute;
       right: 0;
       bottom: 10px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
 
       a {
         width: 100%;

@@ -42,18 +42,23 @@
           </li>
         </ul>
       </nav>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
   <!-- fv -->
   <section class="fv" id="fv">
     <h1 class="fv__title">
-      整居モデルハウス
+      整居<br class="sp">モデルハウス
       <span class="fv__title__sm">TOTONOI MODELHOUSE</span>
     </h1>
     <div class="fv__info">
       <p class="fv__info__text">
-        あなたも、暮らしも、整う住まい<br>
+        あなたも、暮らしも、整う住まい<br class="">
         サウナ付きモデルハウス
       </p>
       <p class="fv__info__date">
@@ -236,18 +241,18 @@
   </section>
 
   <!-- slide -->
-  <section class="slide" id="slide">
-      <div class="slide__slider">
-        <div class="slide__slider--cnt">
+  <section class="plan-slide" id="slide">
+      <div class="plan-slide__slider">
+        <div class="plan-slide__slider--cnt">
           <img class="img-pc" src="img/point__img01.jpg" width="588" height="355">
         </div>
-        <div class="slide__slider--cnt">
+        <div class="plan-slide__slider--cnt">
           <img class="img-pc" src="img/point__img02.jpg"width="588" height="355">
         </div>
-        <div class="slide__slider--cnt">
+        <div class="plan-slide__slider--cnt">
           <img class="img-pc" src="img/point__img03.jpg"width="588" height="355">
         </div>
-        <div class="slide__slider--cnt">
+        <div class="plan-slide__slider--cnt">
           <img class="img-pc" src="img/point__img04.jpg"width="588" height="355">
         </div>
       </div>
@@ -488,7 +493,7 @@
 
 /* slide */
 $(function() {
-    $('.slide__slider').slick({
+    $('.plan-slide__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 2,
         autoplay: true,
