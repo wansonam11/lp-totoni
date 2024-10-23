@@ -173,9 +173,6 @@ body {
         }
       }
     }
-
-
-
   }
 
   &.active {
@@ -364,7 +361,7 @@ body {
 
 //concept
 .concept {
-  background: url(./img/concept_bg.png) no-repeat top center;
+  background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -999,7 +996,7 @@ body {
 
 //access
 .access {
-  background: url(./img/concept_bg.png) no-repeat top center;
+  background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 80px;
@@ -1241,6 +1238,7 @@ body {
   overflow: hidden;
   background-color: #EBEBEB;
   padding: 80px;
+
   @media screen and (max-width: 1024px) {
     padding: 0;
   }
@@ -1278,13 +1276,14 @@ body {
   &__box {
     width: 100%;
     margin: 0 auto;
-    
+
     &__img {
       padding: 80px 0;
       position: relative;
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
+
       @media screen and (max-width: 640px) {
         padding: 2% 0 10% 0;
       }
@@ -1294,24 +1293,28 @@ body {
         color: #fff;
         width: 58px;
         height: 58px;
-        background:  linear-gradient(to bottom, #EBEBEB, #606060);
+        background: linear-gradient(to bottom, #EBEBEB, #606060);
         border-radius: 50%;
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Zen Kaku Gothic New";
+
         @media screen and (max-width: 780px) {
           width: 7vw;
           height: 7vw;
           font-size: 3vw;
         }
+
         @media screen and (max-width: 640px) {
           width: 6vw;
           height: 6vw;
           font-size: 2vw;
         }
+
         cursor: pointer;
+
         &.icon01 {
           top: 390px;
           left: 78px;
@@ -1320,15 +1323,18 @@ body {
             top: 50vw;
             left: 10vw;
           }
+
           @media screen and (max-width: 700px) {
             top: 55vw;
             left: 11vw;
           }
+
           @media screen and (max-width: 634px) {
             top: 51vw;
             left: 14vw;
           }
-        } 
+        }
+
         &.icon02 {
           top: 220px;
           left: 205px;
@@ -1337,15 +1343,18 @@ body {
             top: 28vw;
             left: 26vw;
           }
+
           @media screen and (max-width: 700px) {
             top: 32vw;
             left: 28vw;
           }
+
           @media screen and (max-width: 634px) {
             top: 33vw;
             left: 13vw;
           }
         }
+
         &.icon03 {
           bottom: 197px;
           right: 233px;
@@ -1354,15 +1363,18 @@ body {
             bottom: 25vw;
             right: 29vw;
           }
+
           @media screen and (max-width: 700px) {
             bottom: 30vw;
             right: 34vw;
           }
+
           @media screen and (max-width: 634px) {
             bottom: 29vw;
             right: 37vw;
           }
         }
+
         &.icon04 {
           top: 300px;
           left: 463px;
@@ -1371,16 +1383,19 @@ body {
             top: 39vw;
             left: 59vw;
           }
+
           @media screen and (max-width: 700px) {
             top: 43vw;
             left: 62vw;
           }
+
           @media screen and (max-width: 634px) {
             top: 38vw;
             left: 71vw;
           }
         }
       }
+
       img {
         width: 100%;
         object-fit: cover;
@@ -1396,158 +1411,168 @@ body {
     &__wrap {
       width: 100%;
       padding: 80px 0;
+
       @media screen and (max-width: 1024px) {
         padding: 0 0 80px 0;
       }
 
     }
-      &__list {
-        display: flex !important;
-        width: 100%;
-        margin: 0 auto;
+
+    &__list {
+      display: flex !important;
+      width: 100%;
+      margin: 0 auto;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+
+      &__item {
+        width: 50%;
+        padding: 20px 20px;
+
         @media screen and (max-width: 1024px) {
-          flex-direction: column;
+          width: 500px;
+          margin: 0 auto;
         }
-  
-        &__item {
-          width: 50%;
-          padding: 20px 20px;
-          @media screen and (max-width: 1024px) {
-            width: 500px;
-            margin: 0 auto;
-          }
-          @media screen and (max-width: 500px) {
-            width: 100%;
-            padding: 0 2%;
-          }
 
-          &__eng {
-            font-family: "Zen Kaku Gothic New";
-            font-style: italic;
-            color: #000;
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            text-align: center;
-          }
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          padding: 0 2%;
+        }
 
-          &__number {
-            color: #000;
-            font-family: "Zen Kaku Gothic New";
-            font-size: 6rem;
-            margin: 0 auto;
-            text-align: center;
-            @media screen and (max-width: 375px) {
-              font-size: 4rem;
-            }
-          }
+        &__eng {
+          font-family: "Zen Kaku Gothic New";
+          font-style: italic;
+          color: #000;
+          font-size: 1.6rem;
+          margin-bottom: 10px;
+          text-align: center;
+        }
 
-          &__title {
-            font-family: "Zen Kaku Gothic New";
-            font-size: 2.4rem;
-            color: #000;
-            font-weight: 100;
-            line-height: 1.5;
-            margin-bottom: 35px;
-            text-align: center;
-            @media screen and (max-width: 640px) {
-              font-size: 2rem;
-            }
-          }
+        &__number {
+          color: #000;
+          font-family: "Zen Kaku Gothic New";
+          font-size: 6rem;
+          margin: 0 auto;
+          text-align: center;
 
-          &__txt {
-            font-weight: 300;
-            font-family: "Zen Kaku Gothic New";
-            font-size: 1.6rem;
-            color: #3a3a3a;
-            line-height: 2;
-            @media screen and (max-width: 640px) {
-              font-size: 1.4rem;
-            }
+          @media screen and (max-width: 375px) {
+            font-size: 4rem;
           }
         }
 
-        &__photo {
-          padding: 20px 20px;
-          width: 50%;
-          flex-shrink: 0;
-          overflow: hidden;
-          @media screen and (max-width: 1024px) {
-            padding: 0;
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
+        &__title {
+          font-family: "Zen Kaku Gothic New";
+          font-size: 2.4rem;
+          color: #000;
+          font-weight: 100;
+          line-height: 1.5;
+          margin-bottom: 35px;
+          text-align: center;
+
+          @media screen and (max-width: 640px) {
+            font-size: 2rem;
           }
-          img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
+        }
+
+        &__txt {
+          font-weight: 300;
+          font-family: "Zen Kaku Gothic New";
+          font-size: 1.6rem;
+          color: #3a3a3a;
+          line-height: 2;
+
+          @media screen and (max-width: 640px) {
+            font-size: 1.4rem;
           }
         }
       }
 
-      &__btn {
-        position: relative;
-        
-        .slick-prev-point {
-          position: absolute;
-          top: 50%;
+      &__photo {
+        padding: 20px 20px;
+        width: 50%;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        @media screen and (max-width: 1024px) {
+          padding: 0;
+          max-width: 500px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__btn {
+      position: relative;
+
+      .slick-prev-point {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+
+        @media screen and (max-width: 1024px) {
           left: 0;
-          transform: translateY(-50%);
-          z-index: 1;
-          cursor: pointer;
-  
-          @media screen and (max-width: 1024px) {
-            left: 0;
-          }
-  
-          @media screen and (max-width: 640px) {
-  
-            svg {
-              width: 10.8125vw;
-              height: 10.8125vw;
-              padding-left: 20px;
-            }
-          }
-  
-          @media screen and (max-width: 435px) {
-            svg {
-              padding-left: 0;
-            }
+        }
+
+        @media screen and (max-width: 640px) {
+
+          svg {
+            width: 10.8125vw;
+            height: 10.8125vw;
+            padding-left: 20px;
           }
         }
-  
-  
-        .slick-next-point {
-          position: absolute;
-          top: 50%;
+
+        @media screen and (max-width: 435px) {
+          svg {
+            padding-left: 0;
+          }
+        }
+      }
+
+
+      .slick-next-point {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+
+        @media screen and (max-width: 1024px) {
           right: 0;
-          transform: translateY(-50%);
-          z-index: 1;
-          cursor: pointer;
-  
-          @media screen and (max-width: 1024px) {
-            right: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+
+          svg {
+            width: 10.8125vw;
+            height: 10.8125vw;
+            padding-right: 20px;
           }
-  
-          @media screen and (max-width: 640px) {
-  
-            svg {
-              width: 10.8125vw;
-              height: 10.8125vw;
-              padding-right: 20px;
-            }
-          }
-  
-          @media screen and (max-width: 435px) {
-            svg {
-              padding-right: 0;
-            }
+        }
+
+        @media screen and (max-width: 435px) {
+          svg {
+            padding-right: 0;
           }
         }
       }
     }
   }
+}
 
 //work
 .works {
@@ -1585,6 +1610,7 @@ body {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+
   @media screen and (max-width: 640px) {
     padding: 0;
   }
