@@ -156,7 +156,8 @@ a {
   display: block;
   background-color: rgba(46, 24, 3, 0.2509803922);
   transform: translateX(0);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .fv {
@@ -1156,6 +1157,11 @@ a {
   background-color: #EBEBEB;
   padding: 80px;
 }
+@media screen and (max-width: 1024px) {
+  .point02 {
+    padding: 0;
+  }
+}
 .point02__container {
   background-color: #fff;
   width: 100%;
@@ -1196,6 +1202,11 @@ a {
   max-width: 600px;
   margin: 0 auto;
 }
+@media screen and (max-width: 640px) {
+  .point02__box__img {
+    padding: 2% 0 10% 0;
+  }
+}
 .point02__box__img__icon {
   font-size: 2.4rem;
   color: #fff;
@@ -1210,56 +1221,112 @@ a {
   font-family: "Zen Kaku Gothic New";
   cursor: pointer;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .point02__box__img__icon {
-    width: 8vw;
-    height: 8vw;
+    width: 7vw;
+    height: 7vw;
     font-size: 3vw;
   }
 }
+@media screen and (max-width: 640px) {
+  .point02__box__img__icon {
+    width: 6vw;
+    height: 6vw;
+    font-size: 2vw;
+  }
+}
 .point02__box__img__icon.icon01 {
-  top: 330px;
+  top: 390px;
   left: 78px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
+  .point02__box__img__icon.icon01 {
+    top: 50vw;
+    left: 10vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .point02__box__img__icon.icon01 {
+    top: 55vw;
+    left: 11vw;
+  }
+}
+@media screen and (max-width: 634px) {
   .point02__box__img__icon.icon01 {
     top: 51vw;
-    left: 11vw;
+    left: 14vw;
   }
 }
 .point02__box__img__icon.icon02 {
   top: 220px;
   left: 205px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .point02__box__img__icon.icon02 {
-    top: 34vw;
-    left: 30vw;
+    top: 28vw;
+    left: 26vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .point02__box__img__icon.icon02 {
+    top: 32vw;
+    left: 28vw;
+  }
+}
+@media screen and (max-width: 634px) {
+  .point02__box__img__icon.icon02 {
+    top: 33vw;
+    left: 13vw;
   }
 }
 .point02__box__img__icon.icon03 {
   bottom: 197px;
   right: 233px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .point02__box__img__icon.icon03 {
-    bottom: 31vw;
-    right: 35vw;
+    bottom: 25vw;
+    right: 29vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .point02__box__img__icon.icon03 {
+    bottom: 30vw;
+    right: 34vw;
+  }
+}
+@media screen and (max-width: 634px) {
+  .point02__box__img__icon.icon03 {
+    bottom: 29vw;
+    right: 37vw;
   }
 }
 .point02__box__img__icon.icon04 {
   top: 300px;
   left: 463px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .point02__box__img__icon.icon04 {
-    top: 55vw;
+    top: 39vw;
+    left: 59vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .point02__box__img__icon.icon04 {
+    top: 43vw;
+    left: 62vw;
+  }
+}
+@media screen and (max-width: 634px) {
+  .point02__box__img__icon.icon04 {
+    top: 38vw;
     left: 71vw;
   }
 }
 .point02__box__img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .point02__slider {
   width: 100%;
@@ -1297,6 +1364,7 @@ a {
 @media screen and (max-width: 500px) {
   .point02__slider__list__item {
     width: 100%;
+    padding: 0 2%;
   }
 }
 .point02__slider__list__item__eng {
@@ -1314,6 +1382,11 @@ a {
   margin: 0 auto;
   text-align: center;
 }
+@media screen and (max-width: 375px) {
+  .point02__slider__list__item__number {
+    font-size: 4rem;
+  }
+}
 .point02__slider__list__item__title {
   font-family: "Zen Kaku Gothic New";
   font-size: 2.4rem;
@@ -1323,11 +1396,22 @@ a {
   margin-bottom: 35px;
   text-align: center;
 }
+@media screen and (max-width: 640px) {
+  .point02__slider__list__item__title {
+    font-size: 2rem;
+  }
+}
 .point02__slider__list__item__txt {
+  font-weight: 300;
   font-family: "Zen Kaku Gothic New";
   font-size: 1.6rem;
   color: #3a3a3a;
   line-height: 2;
+}
+@media screen and (max-width: 640px) {
+  .point02__slider__list__item__txt {
+    font-size: 1.4rem;
+  }
 }
 .point02__slider__list__photo {
   padding: 20px 20px;
@@ -1347,7 +1431,8 @@ a {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .point02__slider__btn {
   position: relative;
@@ -1838,6 +1923,4 @@ a {
   position: absolute;
   top: -50px;
   right: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
