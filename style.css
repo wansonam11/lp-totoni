@@ -50,15 +50,15 @@ a {
     padding: 0 4%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 640px) {
   .header__container {
     height: 60px;
   }
 }
 .header__container .ham-menu {
   cursor: pointer;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   position: relative;
   z-index: 3;
   top: 0;
@@ -72,44 +72,34 @@ a {
 }
 .header__container .ham-menu.active span:nth-child(1) {
   transform: rotate(-45deg);
-  top: 48px;
+  top: 24px;
   width: 50px;
-  left: 30px;
+  left: 1px;
 }
 .header__container .ham-menu.active span:nth-child(2) {
   display: none;
 }
 .header__container .ham-menu.active span:nth-child(3) {
   transform: rotate(45deg);
-  top: 49px;
+  top: 25px;
   width: 50px;
-  left: 31px;
+  left: 0px;
 }
 .header__container .ham-menu span {
   display: inline-block;
   position: absolute;
-  left: 20px;
   height: 1px;
   background: #fff;
   width: 50px;
 }
-@media screen and (max-width: 640px) {
-  .header__container .ham-menu span {
-    left: 35px;
-    width: 42px;
-  }
-}
 .header__container .ham-menu span:nth-child(1) {
-  top: 65px;
-  margin-left: 20px;
+  top: 40px;
 }
 .header__container .ham-menu span:nth-child(2) {
-  top: 50px;
-  margin-left: 20px;
+  top: 25px;
 }
 .header__container .ham-menu span:nth-child(3) {
-  top: 35px;
-  margin-left: 20px;
+  top: 10px;
 }
 .header__logo {
   width: 80px;
@@ -173,8 +163,7 @@ a {
   display: block;
   background-color: rgba(46, 24, 3, 0.2509803922);
   transform: translateX(0);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .fv {
@@ -305,13 +294,19 @@ a {
     width: 20vw;
     height: 20vw;
   }
+  .fv__float a {
+    display: none;
+  }
+  .fv__float a img {
+    width: 100%;
+  }
 }
 .fv__float img {
   width: 100%;
 }
 @media screen and (max-width: 640px) {
   .fv__float {
-    display: none !important;
+    display: none;
   }
 }
 .fv__float-sp {
@@ -435,6 +430,7 @@ a {
   .concept__content__text {
     width: 100%;
     padding-left: 0;
+    margin-bottom: 4%;
   }
 }
 .concept__content__text h3 {
@@ -477,7 +473,7 @@ a {
 }
 @media screen and (max-width: 800px) {
   .concept__content__text p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -706,15 +702,15 @@ a {
   .point__box__info__title {
     width: 60%;
     font-size: 2rem;
+    padding-bottom: 2%;
+    margin-bottom: 4%;
   }
 }
 @media screen and (max-width: 640px) {
   .point__box__info__title {
     border-right: 0;
     width: 100%;
-    margin-bottom: 2%;
     border-bottom: 1px solid #606060;
-    padding-bottom: 2%;
     font-size: 1.8rem;
   }
   .point__box__info__title .sp {
@@ -767,7 +763,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .point__box__info__content {
-    padding: 2% 0 4% 0;
+    padding: 4% 0 4% 0;
     width: 100%;
   }
 }
@@ -1446,8 +1442,7 @@ a {
 }
 .point02__box__img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .point02__slider {
   position: relative;
@@ -1553,8 +1548,7 @@ a {
   width: 100%;
   height: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .point02__slider__btn .slick-prev-point {
   position: absolute;
@@ -1570,13 +1564,20 @@ a {
   }
 }
 @media screen and (max-width: 640px) {
+  .point02__slider__btn .slick-prev-point {
+    left: -3%;
+    top: 80%;
+  }
   .point02__slider__btn .slick-prev-point svg {
     width: 10.8125vw;
     height: 10.8125vw;
-    padding-left: 20px;
+    padding-left: 2%;
   }
 }
 @media screen and (max-width: 435px) {
+  .point02__slider__btn .slick-prev-point {
+    top: 80%;
+  }
   .point02__slider__btn .slick-prev-point svg {
     padding-left: 0;
   }
@@ -1595,13 +1596,20 @@ a {
   }
 }
 @media screen and (max-width: 640px) {
+  .point02__slider__btn .slick-next-point {
+    right: -3%;
+    top: 80%;
+  }
   .point02__slider__btn .slick-next-point svg {
     width: 10.8125vw;
     height: 10.8125vw;
-    padding-right: 20px;
+    padding-right: 2%;
   }
 }
 @media screen and (max-width: 435px) {
+  .point02__slider__btn .slick-next-point {
+    top: 80%;
+  }
   .point02__slider__btn .slick-next-point svg {
     padding-right: 0;
   }
@@ -2073,4 +2081,6 @@ a {
   position: absolute;
   top: -50px;
   right: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -59,14 +59,14 @@ body {
       padding: 0 4%;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 640px) {
       height: 60px;
     }
 
     .ham-menu {
       cursor: pointer;
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       position: relative;
       z-index: 3;
       top: 0;
@@ -80,9 +80,9 @@ body {
       &.active span {
         &:nth-child(1) {
           transform: rotate(-45deg);
-          top: 48px;
+          top: 24px;
           width: 50px;
-          left: 30px;
+          left: 1px;
         }
 
         &:nth-child(2) {
@@ -91,38 +91,33 @@ body {
 
         &:nth-child(3) {
           transform: rotate(45deg);
-          top: 49px;
+          top: 25px;
           width: 50px;
-          left: 31px;
+          left: 0px;
         }
       }
 
       span {
         display: inline-block;
         position: absolute;
-        left: 20px;
+        //left: 20px;
         height: 1px;
         background: #fff;
         width: 50px;
 
-        @media screen and (max-width: 640px) {
-          left: 35px;
-          width: 42px;
-        }
-
         &:nth-child(1) {
-          top: 65px;
-          margin-left: 20px;
+          top: 40px;
+          //margin-left: 20px;
         }
 
         &:nth-child(2) {
-          top: 50px;
-          margin-left: 20px;
+          top: 25px;
+          //margin-left: 20px;
         }
 
         &:nth-child(3) {
-          top: 35px;
-          margin-left: 20px;
+          top: 10px;
+          //margin-left: 20px;
         }
       }
     }
@@ -330,6 +325,12 @@ body {
     @media screen and (max-width: 1024px) {
       width: 20vw;
       height: 20vw;
+      a {
+        display: none;
+        img {
+          width: 100%;
+        }
+      }
     }
 
     img {
@@ -337,7 +338,7 @@ body {
     }
 
     @media screen and (max-width: 640px) {
-      display: none !important;
+      display: none;
     }
   }
 
@@ -347,6 +348,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+
 
     @media screen and (max-width: 640px) {
       display: block;
@@ -463,6 +465,7 @@ body {
       @media screen and (max-width: 640px) {
         width: 100%;
         padding-left: 0;
+        margin-bottom: 4%;
       }
 
       h3 {
@@ -500,7 +503,7 @@ body {
         }
 
         @media screen and (max-width: 800px) {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
       }
     }
@@ -744,14 +747,14 @@ body {
         @media screen and (max-width: 1024px) {
           width: 60%;
           font-size: 2rem;
+          padding-bottom: 2%;
+          margin-bottom: 4%;
         }
 
         @media screen and (max-width: 640px) {
           border-right: 0;
           width: 100%;
-          margin-bottom: 2%;
           border-bottom: 1px solid #606060;
-          padding-bottom: 2%;
           font-size: 1.8rem;
 
           .sp {
@@ -806,7 +809,7 @@ body {
         }
 
         @media screen and (max-width: 640px) {
-          padding: 2% 0 4% 0;
+          padding: 4% 0 4% 0;
           width: 100%;
         }
 
@@ -1624,21 +1627,22 @@ body {
         }
 
         @media screen and (max-width: 640px) {
-
+          left: -3%;
+          top: 80%;
           svg {
             width: 10.8125vw;
             height: 10.8125vw;
-            padding-left: 20px;
+            padding-left: 2%;
           }
         }
 
         @media screen and (max-width: 435px) {
+          top: 80%;
           svg {
             padding-left: 0;
           }
         }
       }
-
 
       .slick-next-point {
         position: absolute;
@@ -1653,15 +1657,17 @@ body {
         }
 
         @media screen and (max-width: 640px) {
-
+          right: -3%;
+          top: 80%;
           svg {
             width: 10.8125vw;
             height: 10.8125vw;
-            padding-right: 20px;
+            padding-right: 2%;
           }
         }
 
         @media screen and (max-width: 435px) {
+          top: 80%;
           svg {
             padding-right: 0;
           }
