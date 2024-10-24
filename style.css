@@ -50,7 +50,13 @@ a {
     padding: 0 4%;
   }
 }
+@media screen and (max-width: 1024px) {
+  .header__container {
+    height: 60px;
+  }
+}
 .header__container .ham-menu {
+  cursor: pointer;
   width: 100px;
   height: 100px;
   position: relative;
@@ -67,8 +73,8 @@ a {
 .header__container .ham-menu.active span:nth-child(1) {
   transform: rotate(-45deg);
   top: 48px;
-  width: 60px;
-  left: 13px;
+  width: 50px;
+  left: 30px;
 }
 .header__container .ham-menu.active span:nth-child(2) {
   display: none;
@@ -76,8 +82,8 @@ a {
 .header__container .ham-menu.active span:nth-child(3) {
   transform: rotate(45deg);
   top: 49px;
-  width: 60px;
-  left: 13px;
+  width: 50px;
+  left: 31px;
 }
 .header__container .ham-menu span {
   display: inline-block;
@@ -86,6 +92,12 @@ a {
   height: 1px;
   background: #fff;
   width: 50px;
+}
+@media screen and (max-width: 640px) {
+  .header__container .ham-menu span {
+    left: 35px;
+    width: 42px;
+  }
 }
 .header__container .ham-menu span:nth-child(1) {
   top: 65px;
@@ -101,6 +113,11 @@ a {
 }
 .header__logo {
   width: 80px;
+}
+@media screen and (max-width: 640px) {
+  .header__logo {
+    width: 60px;
+  }
 }
 .header__logo img {
   width: 100%;
@@ -156,7 +173,8 @@ a {
   display: block;
   background-color: rgba(46, 24, 3, 0.2509803922);
   transform: translateX(0);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .fv {
@@ -168,6 +186,12 @@ a {
   background-position: center top;
   display: flex;
   position: relative;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .fv {
+    margin-bottom: 8%;
+  }
 }
 .fv__title {
   color: #fff;
@@ -326,12 +350,11 @@ a {
 .concept {
   background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .concept {
-    padding: 10% 0;
+    margin-bottom: 8%;
   }
 }
 .concept__container {
@@ -357,7 +380,7 @@ a {
   font-family: "Zen Kaku Gothic New";
   font-weight: normal;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .concept__title {
     padding-top: 0;
   }
@@ -371,6 +394,11 @@ a {
   padding-top: 40px;
   display: flex;
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .concept__content {
+    padding-top: 4%;
+  }
 }
 @media screen and (max-width: 640px) {
   .concept__content {
@@ -388,12 +416,6 @@ a {
 @media screen and (max-width: 640px) {
   .concept__content__img {
     width: 100%;
-    padding: 2% 5%;
-  }
-}
-@media screen and (max-width: 375px) {
-  .concept__content__img {
-    padding: 0;
   }
 }
 .concept__content__img img {
@@ -403,7 +425,7 @@ a {
   width: calc(100% - 500px);
   padding-left: 100px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .concept__content__text {
     width: 55%;
     padding-left: 4%;
@@ -422,14 +444,24 @@ a {
   line-height: 1.5;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
   .concept__content__text h3 {
-    font-size: 2.4vw;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .concept__content__text h3 {
-    font-size: 4.7vw;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .concept__content__text h3 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 429px) {
+  .concept__content__text h3 {
+    font-size: 1.6rem;
   }
 }
 .concept__content__text p {
@@ -440,50 +472,43 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .concept__content__text p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .concept__content__text p {
+    font-size: 1.2rem;
   }
 }
 
 .cta {
   cursor: pointer;
   width: 100%;
-  height: 330px;
   background: url(./img/cta__bg.jpg) no-repeat top center;
   background-size: cover;
 }
-@media screen and (max-width: 1024px) {
-  .cta {
-    height: 40vw;
-  }
-}
 .cta__container {
   max-width: 1240px;
-  padding: 0 20px;
+  padding: 50px 0;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .cta__container {
+    padding: 4% 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cta__container {
+    padding: 4% 4%;
+  }
 }
 .cta__container:hover .cta__link p::after {
   transform: scale(1, 1);
   transform-origin: left top;
 }
-@media screen and (max-width: 1024px) {
-  .cta__container {
-    padding: 0 2%;
-  }
-}
-@media screen and (max-width: 640px) {
-  .cta__container {
-    padding: 0 4%;
-  }
-}
 .cta__link {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
   text-align: center;
 }
 @media screen and (max-width: 640px) {
@@ -507,6 +532,11 @@ a {
     font-size: 1.8rem;
   }
 }
+@media screen and (max-width: 640px) {
+  .cta__link__title {
+    font-size: 1.4rem;
+  }
+}
 .cta__link__title span {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -519,11 +549,18 @@ a {
   }
 }
 .cta__link__img {
+  margin: 0 auto;
   width: 526px;
+  padding: 30px 0;
+}
+@media screen and (max-width: 1024px) {
+  .cta__link__img {
+    padding: 4% 0;
+  }
 }
 @media screen and (max-width: 640px) {
   .cta__link__img {
-    width: 100%;
+    width: 90%;
   }
 }
 .cta__link__img img {
@@ -531,7 +568,7 @@ a {
 }
 .cta__link p {
   margin: 0 auto;
-  width: calc(100% - 300px);
+  width: 300px;
   position: relative;
   color: #fff;
   font-size: 2rem;
@@ -541,6 +578,12 @@ a {
 @media screen and (max-width: 640px) {
   .cta__link p {
     font-size: 1.8rem;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cta__link p {
+    font-size: 1.4rem;
   }
 }
 .cta__link p span {
@@ -572,6 +615,12 @@ a {
 
 .point {
   background-color: #EBEBEB;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .point {
+    margin-bottom: 8%;
+  }
 }
 .point__container {
   width: 100%;
@@ -599,6 +648,8 @@ a {
 @media screen and (max-width: 1024px) {
   .point__title {
     width: 40%;
+    padding-top: 4%;
+    margin-bottom: 3%;
   }
 }
 .point__title small {
@@ -610,6 +661,11 @@ a {
   display: flex;
   width: 100%;
   gap: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .point__box__img {
+    gap: 2%;
+  }
 }
 .point__box__img__image {
   width: 588px;
@@ -626,6 +682,11 @@ a {
   padding: 40px 0 80px 0;
   display: flex;
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .point__box__info {
+    padding: 4% 0 8% 0;
+  }
 }
 @media screen and (max-width: 640px) {
   .point__box__info {
@@ -710,9 +771,19 @@ a {
     width: 100%;
   }
 }
+@media screen and (max-width: 375px) {
+  .point__box__info__content {
+    font-size: 1.2rem;
+  }
+}
 .point__banner {
   width: 100%;
   padding-bottom: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .point__banner {
+    padding-bottom: 8%;
+  }
 }
 @media screen and (max-width: 640px) {
   .point__banner {
@@ -727,6 +798,11 @@ a {
   display: none;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 1024px) {
+  .point__banner-sp {
+    margin-bottom: 8%;
+  }
+}
 @media screen and (max-width: 640px) {
   .point__banner-sp {
     display: block;
@@ -739,11 +815,11 @@ a {
 }
 
 .floor {
-  padding: 70px 0px;
+  margin-bottom: 80px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .floor {
-    padding: 4% 0 10% 0;
+    margin-bottom: 8%;
   }
 }
 .floor__container {
@@ -764,10 +840,14 @@ a {
 }
 .floor__title {
   font-weight: normal;
-  padding-top: 40px;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin: 40px 0;
   font-family: "Zen Kaku Gothic New";
+}
+@media screen and (max-width: 1024px) {
+  .floor__title {
+    margin: 4% 0;
+  }
 }
 .floor__title small {
   display: block;
@@ -905,6 +985,12 @@ a {
 
 .plan-slide {
   width: 100%;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .plan-slide {
+    margin-bottom: 8%;
+  }
 }
 .plan-slide__slider--cnt {
   height: auto;
@@ -922,12 +1008,11 @@ a {
 .access {
   background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  margin: 100px 0 80px 0;
 }
 @media screen and (max-width: 1024px) {
   .access {
-    padding: 8% 0;
+    margin: 0 0 8% 0;
   }
 }
 .access__container {
@@ -959,6 +1044,11 @@ a {
   width: 324px;
   line-height: 2;
 }
+@media screen and (max-width: 1024px) {
+  .access__content__text {
+    margin-bottom: 2%;
+  }
+}
 @media screen and (max-width: 375px) {
   .access__content__text {
     width: 100%;
@@ -966,9 +1056,13 @@ a {
 }
 .access__content__text__title {
   font-weight: normal;
-  padding-top: 40px;
+  margin: 40px 0;
   font-size: 2rem;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .access__content__text__title {
+    margin: 4% 0;
+  }
 }
 .access__content__text__title small {
   display: block;
@@ -982,10 +1076,25 @@ a {
   padding-bottom: 20px;
   font-weight: 300;
 }
+@media screen and (max-width: 1024px) {
+  .access__content__text h3 {
+    padding-bottom: 2%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .access__content__text h3 {
+    font-size: 2rem;
+  }
+}
 .access__content__info {
   font-family: "Zen Kaku Gothic New";
   font-size: 1.6rem;
   font-weight: 300;
+}
+@media screen and (max-width: 375px) {
+  .access__content__info {
+    font-size: 1.4rem;
+  }
 }
 .access__content__image {
   width: calc(100% - 324px);
@@ -1010,7 +1119,7 @@ a {
 }
 
 .flow {
-  padding: 40px 0;
+  margin-bottom: 80px;
 }
 .flow__container {
   width: 100%;
@@ -1033,6 +1142,11 @@ a {
   padding-top: 40px;
   font-size: 2rem;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .flow__title {
+    padding-top: 0;
+  }
 }
 .flow__title small {
   display: block;
@@ -1155,10 +1269,12 @@ a {
   overflow: hidden;
   background-color: #EBEBEB;
   padding: 80px;
+  margin-bottom: 80px;
 }
 @media screen and (max-width: 1024px) {
   .point02 {
     padding: 0;
+    margin-bottom: 8%;
   }
 }
 .point02__container {
@@ -1184,6 +1300,12 @@ a {
   padding-top: 40px;
   font-size: 2rem;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .point02__title {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }
 .point02__title small {
   display: block;
@@ -1324,9 +1446,11 @@ a {
 }
 .point02__box__img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .point02__slider {
+  position: relative;
   width: 100%;
   margin: 0 auto;
 }
@@ -1336,7 +1460,7 @@ a {
 }
 @media screen and (max-width: 1024px) {
   .point02__slider__wrap {
-    padding: 0 0 80px 0;
+    padding: 0;
   }
 }
 .point02__slider__list {
@@ -1429,10 +1553,8 @@ a {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-}
-.point02__slider__btn {
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .point02__slider__btn .slick-prev-point {
   position: absolute;
@@ -1485,6 +1607,14 @@ a {
   }
 }
 
+.works {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .works {
+    margin-bottom: 8%;
+  }
+}
 .works__container {
   width: 100%;
   max-width: 1240px;
@@ -1503,9 +1633,13 @@ a {
 }
 .works__title {
   font-weight: 300;
-  padding-top: 40px;
+  margin: 40px 0;
   font-size: 2rem;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .works__title {
+    margin: 4% 0;
+  }
 }
 .works__title small {
   display: block;
@@ -1591,7 +1725,7 @@ a {
   background: #ddd;
 }
 .y-scroll::-webkit-scrollbar-corner {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(162, 135, 135, 0);
 }
 
 .company__container {
@@ -1612,9 +1746,13 @@ a {
 }
 .company__title {
   font-weight: 300;
-  padding-top: 40px;
+  margin: 40px 0;
   font-size: 2rem;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .company__title {
+    margin: 4% 0;
+  }
 }
 .company__title small {
   display: block;
@@ -1626,6 +1764,11 @@ a {
   align-items: center;
   padding-bottom: 60px;
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .company__box {
+    padding-bottom: 8%;
+  }
 }
 @media screen and (max-width: 640px) {
   .company__box {
@@ -1726,6 +1869,11 @@ a {
   font-weight: 300;
   font-size: 1.5rem;
 }
+@media screen and (max-width: 375px) {
+  .company__box__content h3 small {
+    font-size: 1.2rem;
+  }
+}
 .company__box__content p {
   font-weight: 300;
   font-family: "Zen Kaku Gothic New";
@@ -1741,7 +1889,7 @@ a {
   padding: 40px 0 80px 0;
   width: 100%;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .company__info {
     padding: 4% 0 8% 0;
   }
@@ -1755,6 +1903,11 @@ a {
   justify-content: space-between;
   margin-top: 24px;
   text-align: left;
+}
+@media screen and (max-width: 1024px) {
+  .company__info__table tbody tr {
+    margin-top: 2%;
+  }
 }
 @media screen and (max-width: 640px) {
   .company__info__table tbody tr {
@@ -1920,6 +2073,4 @@ a {
   position: absolute;
   top: -50px;
   right: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

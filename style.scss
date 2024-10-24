@@ -59,7 +59,12 @@ body {
       padding: 0 4%;
     }
 
+    @media screen and (max-width: 1024px) {
+      height: 60px;
+    }
+
     .ham-menu {
+      cursor: pointer;
       width: 100px;
       height: 100px;
       position: relative;
@@ -76,8 +81,8 @@ body {
         &:nth-child(1) {
           transform: rotate(-45deg);
           top: 48px;
-          width: 60px;
-          left: 13px;
+          width: 50px;
+          left: 30px;
         }
 
         &:nth-child(2) {
@@ -87,8 +92,8 @@ body {
         &:nth-child(3) {
           transform: rotate(45deg);
           top: 49px;
-          width: 60px;
-          left: 13px;
+          width: 50px;
+          left: 31px;
         }
       }
 
@@ -99,6 +104,11 @@ body {
         height: 1px;
         background: #fff;
         width: 50px;
+
+        @media screen and (max-width: 640px) {
+          left: 35px;
+          width: 42px;
+        }
 
         &:nth-child(1) {
           top: 65px;
@@ -120,6 +130,10 @@ body {
 
   &__logo {
     width: 80px;
+
+    @media screen and (max-width: 640px) {
+      width: 60px;
+    }
 
     img {
       width: 100%;
@@ -202,6 +216,12 @@ body {
   background-position: center top;
   display: flex;
   position: relative;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
+  }
+
 
   &__title {
     color: #fff;
@@ -363,11 +383,10 @@ body {
 .concept {
   background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 
-  @media screen and (max-width: 375px) {
-    padding: 10% 0;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
   }
 
   &__container {
@@ -392,7 +411,7 @@ body {
     font-family: "Zen Kaku Gothic New";
     font-weight: normal;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       padding-top: 0;
     }
 
@@ -408,6 +427,10 @@ body {
     display: flex;
     width: 100%;
 
+    @media screen and (max-width: 1024px) {
+      padding-top: 4%;
+    }
+
     @media screen and (max-width: 640px) {
       flex-direction: column-reverse;
     }
@@ -421,11 +444,6 @@ body {
 
       @media screen and (max-width: 640px) {
         width: 100%;
-        padding: 2% 5%;
-      }
-
-      @media screen and (max-width: 375px) {
-        padding: 0;
       }
 
       img {
@@ -437,7 +455,7 @@ body {
       width: calc(100% - 500px);
       padding-left: 100px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1200px) {
         width: 55%;
         padding-left: 4%;
       }
@@ -454,12 +472,20 @@ body {
         line-height: 1.5;
         margin-bottom: 30px;
 
-        @media screen and (max-width: 1024px) {
-          font-size: 2.4vw;
+        @media screen and (max-width: 1240px) {
+          font-size: 2.6rem;
         }
 
-        @media screen and (max-width: 375px) {
-          font-size: 4.7vw;
+        @media screen and (max-width: 1024px) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 800px) {
+          font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 429px) {
+          font-size: 1.6rem;
         }
       }
 
@@ -470,7 +496,11 @@ body {
         line-height: 2;
 
         @media screen and (max-width: 1024px) {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 800px) {
+          font-size: 1.2rem;
         }
       }
     }
@@ -481,23 +511,23 @@ body {
 .cta {
   cursor: pointer;
   width: 100%;
-  height: 330px;
   background: url(./img/cta__bg.jpg) no-repeat top center;
   background-size: cover;
 
-  @media screen and (max-width: 1024px) {
-    height: 40vw;
-  }
-
   &__container {
     max-width: 1240px;
-    padding: 0 20px;
+    padding: 50px 0;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 1024px) {
+      padding: 4% 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 4% 4%;
+    }
 
     &:hover {
       .cta__link {
@@ -508,24 +538,10 @@ body {
           }
         }
       }
-
-
-    }
-
-    @media screen and (max-width: 1024px) {
-      padding: 0 2%;
-    }
-
-    @media screen and (max-width: 640px) {
-      padding: 0 4%;
     }
   }
 
   &__link {
-
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
     text-align: center;
 
     @media screen and (max-width: 640px) {
@@ -546,6 +562,11 @@ body {
         font-size: 1.8rem;
       }
 
+      @media screen and (max-width: 640px) {
+        font-size: 1.4rem;
+      }
+
+
       span {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
@@ -559,10 +580,18 @@ body {
     }
 
     &__img {
+      margin: 0 auto;
       width: 526px;
+      padding: 30px 0;
+
+      @media screen and (max-width: 1024px) {
+        padding: 4% 0;
+        ;
+
+      }
 
       @media screen and (max-width: 640px) {
-        width: 100%;
+        width: 90%;
       }
 
       img {
@@ -572,7 +601,7 @@ body {
 
     p {
       margin: 0 auto;
-      width: calc(100% - 300px);
+      width: 300px;
       position: relative;
       color: #fff;
       font-size: 2rem;
@@ -582,6 +611,12 @@ body {
 
       @media screen and (max-width: 640px) {
         font-size: 1.8rem;
+        width: 200px;
+
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 1.4rem;
       }
 
       span {
@@ -620,6 +655,11 @@ body {
 //point
 .point {
   background-color: #EBEBEB;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
+  }
 
   &__container {
     width: 100%;
@@ -645,6 +685,8 @@ body {
 
     @media screen and (max-width: 1024px) {
       width: 40%;
+      padding-top: 4%;
+      margin-bottom: 3%;
     }
 
     small {
@@ -659,6 +701,10 @@ body {
       display: flex;
       width: 100%;
       gap: 20px;
+
+      @media screen and (max-width: 1024px) {
+        gap: 2%;
+      }
 
       &__image {
         width: 588px;
@@ -677,6 +723,10 @@ body {
       padding: 40px 0 80px 0;
       display: flex;
       width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        padding: 4% 0 8% 0;
+      }
 
       @media screen and (max-width: 640px) {
         flex-direction: column;
@@ -759,6 +809,10 @@ body {
           padding: 2% 0 4% 0;
           width: 100%;
         }
+
+        @media screen and (max-width: 375px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -766,6 +820,10 @@ body {
   &__banner {
     width: 100%;
     padding-bottom: 80px;
+
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 8%;
+    }
 
     @media screen and (max-width: 640px) {
       display: none;
@@ -781,6 +839,10 @@ body {
     display: none;
     margin-bottom: 80px;
 
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 8%;
+    }
+
     @media screen and (max-width: 640px) {
       display: block;
       margin-bottom: 0;
@@ -795,10 +857,10 @@ body {
 
 //floor
 .floor {
-  padding: 70px 0px;
+  margin-bottom: 80px;
 
-  @media screen and (max-width: 640px) {
-    padding: 4% 0 10% 0;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
   }
 
   &__container {
@@ -818,10 +880,13 @@ body {
 
   &__title {
     font-weight: normal;
-    padding-top: 40px;
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin: 40px 0;
     font-family: "Zen Kaku Gothic New";
+
+    @media screen and (max-width: 1024px) {
+      margin: 4% 0;
+    }
 
     small {
       display: block;
@@ -887,7 +952,6 @@ body {
 
       &__popup {
         width: 55px;
-
         display: block;
         position: absolute;
         right: 10px;
@@ -899,7 +963,6 @@ body {
 
         @media screen and (max-width: 640px) {
           width: 6vw;
-
         }
 
         img {
@@ -971,6 +1034,11 @@ body {
 //slide
 .plan-slide {
   width: 100%;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
+  }
 
   &__slider--cnt {
     height: auto;
@@ -998,11 +1066,10 @@ body {
 .access {
   background: url(./img/bg.png) no-repeat top center;
   background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  margin: 100px 0 80px 0;
 
   @media screen and (max-width: 1024px) {
-    padding: 8% 0;
+    margin: 0 0 8% 0;
   }
 
   &__container {
@@ -1032,15 +1099,22 @@ body {
       width: 324px;
       line-height: 2;
 
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 2%;
+      }
+
       @media screen and (max-width: 375px) {
         width: 100%;
       }
 
       &__title {
         font-weight: normal;
-        padding-top: 40px;
+        margin: 40px 0;
         font-size: 2rem;
-        margin-bottom: 30px;
+
+        @media screen and (max-width: 1024px) {
+          margin: 4% 0;
+        }
 
         small {
           display: block;
@@ -1054,6 +1128,15 @@ body {
         font-weight: 400;
         font-size: 2.4rem;
         padding-bottom: 20px;
+
+        @media screen and (max-width: 1024px) {
+          padding-bottom: 2%;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 2rem;
+        }
+
         font-weight: 300;
       }
     }
@@ -1062,6 +1145,10 @@ body {
       font-family: "Zen Kaku Gothic New";
       font-size: 1.6rem;
       font-weight: 300;
+
+      @media screen and (max-width: 375px) {
+        font-size: 1.4rem;
+      }
     }
 
     &__image {
@@ -1088,7 +1175,7 @@ body {
 
 //flow
 .flow {
-  padding: 40px 0;
+  margin-bottom: 80px;
 
   &__container {
     width: 100%;
@@ -1110,6 +1197,10 @@ body {
     padding-top: 40px;
     font-size: 2rem;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 0;
+    }
 
     small {
       display: block;
@@ -1238,9 +1329,11 @@ body {
   overflow: hidden;
   background-color: #EBEBEB;
   padding: 80px;
+  margin-bottom: 80px;
 
   @media screen and (max-width: 1024px) {
     padding: 0;
+    margin-bottom: 8%;
   }
 
   &__container {
@@ -1265,6 +1358,11 @@ body {
     padding-top: 40px;
     font-size: 2rem;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 0;
+      margin-bottom: 0;
+    }
 
     small {
       display: block;
@@ -1405,6 +1503,7 @@ body {
   }
 
   &__slider {
+    position: relative;
     width: 100%;
     margin: 0 auto;
 
@@ -1413,7 +1512,7 @@ body {
       padding: 80px 0;
 
       @media screen and (max-width: 1024px) {
-        padding: 0 0 80px 0;
+        padding: 0;
       }
 
     }
@@ -1512,8 +1611,6 @@ body {
     }
 
     &__btn {
-      position: relative;
-
       .slick-prev-point {
         position: absolute;
         top: 50%;
@@ -1576,6 +1673,12 @@ body {
 
 //work
 .works {
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 8%;
+  }
+
   &__container {
     width: 100%;
     max-width: 1240px;
@@ -1593,9 +1696,12 @@ body {
 
   &__title {
     font-weight: 300;
-    padding-top: 40px;
+    margin: 40px 0;
     font-size: 2rem;
-    margin-bottom: 30px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 4% 0;
+    }
 
     small {
       display: block;
@@ -1688,15 +1794,12 @@ body {
   }
 
   &::-webkit-scrollbar-corner {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(162, 135, 135, 0);
   }
 }
 
-
-
 //company
 .company {
-
   &__container {
     width: 100%;
     max-width: 1240px;
@@ -1714,9 +1817,12 @@ body {
 
   &__title {
     font-weight: 300;
-    padding-top: 40px;
+    margin: 40px 0;
     font-size: 2rem;
-    margin-bottom: 30px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 4% 0;
+    }
 
     small {
       display: block;
@@ -1730,6 +1836,10 @@ body {
     align-items: center;
     padding-bottom: 60px;
     width: 100%;
+
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 8%;
+    }
 
     @media screen and (max-width: 640px) {
       flex-direction: column-reverse;
@@ -1829,6 +1939,10 @@ body {
           display: block;
           font-weight: 300;
           font-size: 1.5rem;
+
+          @media screen and (max-width: 375px) {
+            font-size: 1.2rem;
+          }
         }
       }
 
@@ -1849,7 +1963,7 @@ body {
     padding: 40px 0 80px 0;
     width: 100%;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       padding: 4% 0 8% 0;
     }
 
@@ -1863,6 +1977,10 @@ body {
           justify-content: space-between;
           margin-top: 24px;
           text-align: left;
+
+          @media screen and (max-width: 1024px) {
+            margin-top: 2%;
+          }
 
           @media screen and (max-width: 640px) {
             flex-direction: column;
